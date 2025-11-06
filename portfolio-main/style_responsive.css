@@ -1,0 +1,592 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+}
+body{
+    background: black;
+    
+}
+html{
+    scroll-behavior: smooth;
+}
+a{
+    color: white;
+    text-decoration: none;
+}
+.nav{
+    position: sticky; top:0;
+    background-color: rgba(0, 0, 0, 0.829);
+    position: 0;
+    left: 0;
+    right: 0;
+    flex-basis: 100%;
+    padding: 10px 9%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+.nav .logo{
+    font-size: 30px;
+    font-weight: 700;
+
+}
+@media screen and (max-width:400px) {
+    .nav{
+        width:100%;
+    }
+}
+.nav ul {
+    display: flex;
+}
+.nav ul li {
+    list-style: none;
+    margin-left: 35px;
+}
+.nav ul li a {
+    font-size: 20px;
+    font-weight: 500;
+    transition: .5s;
+}
+.nav ul li:hover a ,
+.nav ul li.active a {
+    color: #21bbf8ab
+}
+.Home{
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    height: 550px;
+    width: 100%;
+    padding:60px 9% 0;
+    color: white;
+}
+@media screen and (max-width:400px) {
+    .Home{
+        width: 100%;
+    }
+    
+}
+.homeinfo h1{
+    font-size: 55px;
+    color: #21bbf8ab;
+}
+.homeinfo h2 {
+    font-size: 32px;
+    margin-top: -10px;
+}
+.homeinfo h2 span{
+    display: inline-block;
+    color: transparent;
+    -webkit-text-stroke: .5px #21bbf8ab;
+    animation: display-text 6s linear  infinite ;
+    animation-delay: calc(-4s*var(--i));
+}
+@keyframes display-text {
+    25%,100% 
+    {
+        display: none;
+    }
+
+}
+.homeinfo p {
+    display: flex;
+    justify-content: flex-start;
+    font-size: 16px;
+    margin: 10px 0 25px;
+}
+.homeinfo .btnsci{
+    display:flex;
+    align-items: center;
+}
+.btn{
+    display: inline-block;
+
+    padding: 10px 30px;
+    background-color:rgba(33, 187, 248, 0.671) ;
+    border: 2px solid rgba(33, 187, 248, 0.671);
+    border-radius: 40px;
+    box-shadow:  0 0 10px rgba(33, 187, 248, 0.671);
+    font-size: 14px;
+    color: black;
+    font-weight: 600;
+    transition: .5s;
+}
+.nextline{
+    display: flex;
+    flex-direction: column;
+
+}
+.btn:hover{
+    background-color:transparent ;
+    color: rgba(33, 187, 248, 0.671) ;
+    box-shadow:none;
+}
+  .btnsci .sci{
+    display: flex;
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+}
+  .btnsci .sci a {
+    display: inline-flex;
+    padding: 8px;
+    border: 2px solid  rgba(33, 187, 248, 0.671);
+    border-radius: 50%;
+    font-size: 20px;
+    color:  rgba(33, 187, 248, 0.671);
+    margin: 0 8px;
+    transition: .5s;
+ }
+   .btnsci .sci a:hover{
+    background-color: rgba(33, 187, 248, 0.671)  ;
+    color: black;
+    box-shadow:  rgba(33, 187, 248, 0.671) ;
+   }
+
+ 
+.homeimg .imgbox {background-color: #21bbf8ab;
+    width: 32vw;
+    height: 32vw;
+    border-radius: 50%;
+    padding: 5px;
+    cursor: pointer;
+    transition:0.5s linear;
+        border: 3px solid #21bbf8ab ;
+                box-shadow: 0 0 25px  #21bbf8ab;
+}
+     .homeimg .imgbox:hover{
+        transform: scale(1.1);
+        box-shadow: 0 0 25px #21bbf8ab;
+     }
+.homeimg .imgbox .imgitem {
+    position: relative;
+    width: 100%;
+    background-color: black;
+    height: 100%;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+}
+.homeimg .imgbox .imgitem img{
+    position: absolute;
+    display: block;
+    width: 99%;
+    object-fit: cover;
+}
+.about{
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    height: 250px;
+    width: 100%;
+    padding:60px 9% 0;
+    color: white;
+}
+@media screen and (max-width:400px) {
+    .about{
+        width:100%;
+    }    
+}
+.about .aboutinfo h1 {
+    font-size: 45px;
+    color: #21bbf8ab;
+    text-align: center
+}
+.about .aboutinfo p {
+    font-size: 18px;
+    display: contents;
+    justify-content: flex-start;
+}
+
+ .education .boxes{
+    display: flex;
+    justify-content:space-evenly;
+    align-items: center;
+    border-color: 1px #21bbf8ab;
+    height: 100px;
+    width: 100%;
+    margin-bottom: 10%;
+    padding: 60px 9% 0;
+
+   }
+   @media screen and (max-width:400px) {
+     .education{ 
+        width:100%;
+    }    
+}
+   .education  h1{
+    font-size: 45px;
+    color: #21bbf8ab;
+    text-align: center;
+    margin-top:10%;
+   }
+   .education .boxes .box{
+    margin: 20px 0;
+    width: calc(100% /3-20px);
+    text-align: center;
+    border-radius: 12px;
+    padding:30px 10px;
+ border: 1px solid  rgba(33, 187, 248, 0.671);
+    cursor: default;
+    color: white;
+    transition: all 0.4s ease;
+   }
+   .education .boxes .box:hover{
+
+    box-shadow: 0 0 25px #21bbf8ab;
+    color: white;
+   }
+   .education .boxes .box .icon{
+    height: 50px;
+    width: 50px;
+    background-color:#21bbf8ab;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 50px;
+    font-size: 18px;
+    color: white;
+    margin: 0 auto 10px auto;
+    transition: all 0.4s ease;
+   }
+   .box p{
+    font-size: 15px;
+   }
+   .education .boxes .box:hover .topic,
+   .education .boxes .box:hover p{
+    color: white;
+    transition: all 0.4s ease;
+   }
+   .education .boxes .box:hover .topic,
+   .education .boxes .box:hover p{
+    color: white;
+   }
+.icon{
+  width: 300px;
+  height: 2080px;
+}
+.homeimg1 .imgbox {background-color: #21bbf8ab;
+    width: 42vw;
+    height: 42vw;
+    border-radius: 50%;
+    padding: 5px;
+    margin-left: 30%;
+    cursor: pointer;
+    transition:0.5s linear;
+        border: 3px solid #21bbf8ab ;
+                box-shadow: 0 0 25px  #21bbf8ab;
+}
+     .homeimg1 .imgbox:hover{
+        transform: scale(1.1);
+        box-shadow: 0 0 25px #21bbf8ab;
+     }
+.homeimg1 .imgbox .imgitem {
+    position: relative;
+    width: 100%;
+    background-color: black;
+    height: 100%;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+}
+.homeimg1 .imgbox .imgitem img{
+    position: absolute;
+    display: block;
+    width: 100%;
+    margin-bottom: 20px;
+    object-fit: cover;
+}
+.skills{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 20px;
+    margin-top: 20px;
+}
+.skills h1{
+    color: #21bbf8ab;
+    font-size: 45px;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 100px;
+}
+.skills .skillsinfo{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+   height: 40px;
+    width: 100%;
+}
+.skills .skillsinfo img{
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    height: 40px;
+    width: 40px;
+    margin: 30px;  
+    margin-left: 45 px;
+}
+.skills .skillsinfo h3{
+    font-size: 16px;
+    color: #21bbf8ab;
+    text-align: center;
+    
+}
+.skills .skillsinfo div{
+    border: 1px solid #6fd5fdab;
+    border-radius: 10px;
+    width: 130px;
+    height: 140px;   
+}
+.skills .skillsinfo :hover{
+    box-shadow: 0 0 25px #21bbf8ab;   
+}
+.achi{
+    height: 100px;
+    width: 100%;
+    margin-top: 200px;
+}
+ .achi h1{
+ color: #21bbf8ab;
+ text-align: center;
+ font-size: 45px;
+}
+.achi li ul {
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+.pro{
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    height: 700px;
+    width: 100%;
+    margin-top: 200px;
+    color: white;
+}
+
+.pro h1{
+    font-size: 45px;
+    color: #21bbf8ab;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+    .pro .proinfo{
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        margin: 70px;
+        margin-left: 10px;
+     display: inline-flex;
+    padding: 8px;
+    border: 1px solid  rgba(33, 187, 248, 0.671);
+    border-radius: 15PX;
+    font-size: 20px;
+    color:  rgb(255, 255, 255);
+    margin: 20px 8px;
+    margin-left: 10px;
+    transition: .5s;
+
+    }
+    .pro .proinfo img{
+        height: 100px;
+        width: 200px;
+    }
+      
+     .pro .proinfo:hover{
+    color: rgb(255, 255, 255);
+    box-shadow: 0 0 25px #21bbf8ab;
+    } 
+
+    .con{
+        display: flex;
+        background-color: rgba(0, 0, 0, 0.212);
+        justify-content:start;
+        text-align: center;
+        height: 400px;
+        width: 100%;
+        padding: 120px;
+        margin-top:10px ;
+        gap: 10px;
+    }
+    .con .coninfo h1{
+        margin-left: 420px;
+        font-size: 45px;
+        color: #6fd5fdab;
+        align-items: center;
+        display: flex;
+        justify-content: center;
+    }
+    .con .coninfo p{
+        text-align: start;
+        font-size: 18px;
+        color: white ;
+        padding: 2px;
+    }
+.forter{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+
+/* ===============================================
+   Responsive Design Improvements
+   =============================================== */
+
+/* Mobile Devices (max-width: 600px) */
+@media screen and (max-width: 600px) {
+    .nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .nav ul {
+        flex-direction: column;
+        width: 100%;
+        margin-top: 10px;
+    }
+    .nav ul li {
+        margin: 10px 0;
+    }
+    .Home, .about, .education .boxes, .skills, .pro, .con {
+        flex-direction: column;
+        height: auto;
+        padding: 20px;
+    }
+    .homeinfo h1 {
+        font-size: 32px;
+    }
+    .homeinfo h2 {
+        font-size: 20px;
+    }
+    .homeimg .imgbox {
+        width: 70vw;
+        height: 70vw;
+    }
+    .education .boxes .box {
+        width: 100%;
+        margin: 10px 0;
+    }
+    .skills{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 20px;
+}
+.skills h1{
+    color: #21bbf8ab;
+    font-size: 45px;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 100px;
+}
+.skills .skillsinfo{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+   height: 400px;
+    width: 100%;
+}
+.skills .skillsinfo img{
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    height: 40px;
+    width: 40px;
+    margin: 30px;  
+    margin-left: 45 px;
+}
+.skills .skillsinfo h3{
+    font-size: 16px;
+    color: #21bbf8ab;
+    text-align: center;
+    
+}
+.skills .skillsinfo div{
+    border: 1px solid #6fd5fdab;
+    border-radius: 10px;
+    width: 130px;
+    height: 140px;
+    
+}
+.skills .skillsinfo :hover{
+    box-shadow: 0 0 25px #21bbf8ab;
+    
+}
+.achi{
+    height: 200px;
+    width: 100%;
+    margin-top: 300px;
+}
+ .achi h1{
+ color: #21bbf8ab;
+ text-align: center;
+ font-size: 45px;
+}
+.achi li ul {
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+    
+    .pro {
+        margin-top: 50px;
+    }
+    .con {
+        padding: 20px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .con .coninfo h1 {
+        margin-left: 0;
+        font-size: 28px;
+    }
+}
+
+/* Tablets (601px to 1024px) */
+@media screen and (min-width: 601px) and (max-width: 1024px) {
+    .Home, .about, .education .boxes, .skills, .pro, .con {
+        flex-direction: column;
+        padding: 40px;
+        height: auto;
+    }
+    .homeinfo h1 {
+        font-size: 40px;
+    }
+    .homeinfo h2 {
+        font-size: 26px;
+    }
+    .homeimg .imgbox {
+        width: 50vw;
+        height: 50vw;
+    }
+    .education .boxes .box {
+        width: 80%;
+        margin: 15px 0;
+    }
+    .skills .skillsinfo img {
+        height: 90px;
+        width: 90px;
+    }
+}
+
+/* Large Screens (Desktop) */
+@media screen and (min-width: 1025px) {
+    /* Keep original styling, no major overrides */
+}
